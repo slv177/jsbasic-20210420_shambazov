@@ -1,6 +1,7 @@
 function truncate(str, maxlength) {
   if (str.length > maxlength){
-    return str.slice(0, maxlength - 1) + "…";
+    const slice = str.slice(0, maxlength - 1);
+    return `${slice}…`;
   }
   return str;
 }
