@@ -1,5 +1,5 @@
 function isEmpty(obj) {
-  for (let property in obj) {
+  for (const property in obj) {
     return false;
   }
   return true;
