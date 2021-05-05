@@ -2,14 +2,13 @@ function camelize(str) {
   if (str === '') {
     return '';
   }
-  //  не соображу, как оставить первую букву первого слова маленькой
   let arr = str.split('-');
-  console.log('arr-> ', arr);
-  let newArr = arr.map(item => {
-    const firstChar = item[0].toUpperCase();
-    return firstChar + item.slice(1);
+  let newArr = arr.map(function(item, index) {
+    if (index != 0) {
+      return item[0].toUpperCase() + item.slice(1);
+    } else {
+      return item;
+    }
   });
-  let result = newArr.join('');
-  console.log("result-> ", result);
-  return result;
+  return newArr.join('');
 }
