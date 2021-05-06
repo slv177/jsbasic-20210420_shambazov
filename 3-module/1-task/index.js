@@ -1,7 +1,5 @@
 function namify(users) {
-  let result = [];
-  users.map(item =>
-    result.push(item.name)
+  return users.map((item =>
+    item.name)
   );
-  return result;
 }
