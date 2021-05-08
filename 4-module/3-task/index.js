@@ -1,7 +1,6 @@
 function highlight(table) {
   for (const r of table.rows) {
     for (const cell of r.cells) {
-      // cell.parentNode.classList.add('hidden');
       if (cell.dataset.available === 'true') {
         cell.parentNode.classList.replace('hidden', 'available');
       } else if (cell.dataset.available === 'false') {
@@ -20,5 +19,4 @@ function highlight(table) {
       }
     }
   }
-  // console.log(table);
 }
